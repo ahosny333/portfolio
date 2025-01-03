@@ -10007,6 +10007,7 @@ h6,
 .skill-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: #0BCEAF;
 }
 
 .skill-card h2 {
@@ -10021,7 +10022,7 @@ h6,
 
 .skills-div
 {
-  background: #0BCEAF;
+  background: #ffffff;
   padding-top: 20px;
 }
 

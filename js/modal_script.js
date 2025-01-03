@@ -1,8 +1,8 @@
 const projects = [
     {
-        title: "Project 1",
-        description: "This is a detailed description of Project 1.",
-        image: "project1.jpg"
+        title: "Fish feeding system with Rasberry Pi",
+        description: "The goal of that project is to control motors and pumps used in fishing feeder system with RPI and configure settings for programs for each feeder using HMIthe client already have the project in PLC and need to use RPI instead to add more wifi options ,i completely implement that project for backend and frontend using python and pyqt and and make all designs for hardware interfacing RPI to control motors and pumps",
+        image: "img/projects/programming-470x351.jpg" 
     },
     {
         title: "Project 2",
