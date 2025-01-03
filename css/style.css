@@ -9988,7 +9988,11 @@ h6,
   list-style-type: none;
 }
 
+.my_logo{
 
+    height: 50px;
+    width: 70px;
+}
 
 
 .skill-card {
@@ -10019,4 +10023,42 @@ h6,
 {
   background: #0BCEAF;
   padding-top: 20px;
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
 }
