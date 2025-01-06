@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP8266 and ThingSpeak Tutorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px 0;
+    }
+    .image-caption {
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+      margin-top: -10px;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+      <!-- Favicon -->
+      <link href="img/favicon.ico" rel="icon">
+
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+  
+      <!-- Font Awesome -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  
+      <!-- Libraries Stylesheet -->
+      <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+      <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  
+      <!-- Customized Bootstrap Stylesheet -->
+      <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+  <!-- Navbar Start -->
+  <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+    <a href="index.html" class="navbar-brand ml-lg-3">
+        <!-- <h1 class="m-0 display-5"><span class="text-primary">Free</span>Folio</h1> -->
+        <img class="m-0 display-5 my_logo" src="img/Ahmed Hosny.gif" />
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+        <div class="navbar-nav m-auto py-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="index.html" class="nav-item nav-link">About</a>
+            <a href="index.html" class="nav-item nav-link">Quality</a>
+            <a href="index.html" class="nav-item nav-link">Skill</a>
+            <a href="index.html" class="nav-item nav-link">Service</a>
+            <a href="index.html" class="nav-item nav-link">Portfolio</a>
+            <a href="index.html" class="nav-item nav-link">Review</a>
+            <a href="index.html" class="nav-item nav-link">Blog</a>
+            <a href="index.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+  <div class="container">
+    <h1>ESP8266 and ThingSpeak Tutorial</h1>
+    <p><strong>In this post:</strong> Learn to use ESP8266 NodeMCU with a DHT11 sensor to send data to ThingSpeak.</p>
+    <p>ThingSpeak: <a href="https://thingspeak.com" target="_blank">https://thingspeak.com</a></p>
+    <img src="img/blog1/blog.jpg" alt="Channel creation" style="margin: auto;">
+    <br>
+    <h2>What is ThingSpeak?</h2>
+    <p>ThingSpeak is an open IoT platform with MATLAB analytics. You can send sensor data to ThingSpeak and visualize it in charts.</p>
+
+    <h2>Parts Required</h2>
+    <ul>
+      <li>ESP8266 Module (e.g., NodeMCU)</li>
+      <li>DHT11 temperature and humidity sensor</li>
+      <li>Jumper wires</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <p>The ESP8266 reads temperature and humidity via the DHT11 sensor, connects to ThingSpeak via Wi-Fi, and sends data using HTTP GET requests. A web server on the ESP8266 enables configuration of logging parameters:</p>
+    <ul>
+      <li>Start/Stop sending data</li>
+      <li>Frequency of sending</li>
+      <li>ThingSpeak API key</li>
+    </ul>
+    <p>Configurations are managed via an HTML page hosted on the ESP8266 web server.</p>
+
+    <h2>Adding a ThingSpeak Channel</h2>
+    <p>Create a free account on <a href="https://thingspeak.com" target="_blank">ThingSpeak</a>. Go to “My Channels” and click “New Channel.” Add a name, description, and fields, then click “Save Channel.”</p>
+    <img src="img/blog1/1.png" alt="Channel creation" style="margin: auto;">
+    <p class="image-caption"><br>Figure 2: Creating a ThingSpeak channel</p>
+    <p>You can edit charts by clicking the chart options. Set the chart title, type, color, and more.</p>
+    <img src="img/blog1/2.png" alt="Chart options" style="margin: auto;">
+    <img src="img/blog1/3.png" alt="Chart options" style="margin: auto;">
+    <p class="image-caption"><br>Figure 3: Editing chart options</p>
+
+    <h2>ESP8266 and DHT11</h2>
+    <p>The DHT11 sensor comes in two variants: one with 4 pins and another with 3 pins (the latter includes an embedded resistor). Here is the wiring:</p>
+    <ul>
+      <li>GND of DHT11 to GND of ESP8266</li>
+      <li>VCC of DHT11 to 3V of ESP8266</li>
+      <li>Data pin of DHT11 to a digital pin on ESP8266 (e.g., D5)</li>
+    </ul>
+    <img src="img/blog1/4.png" alt="Wiring diagram" style="margin: auto;">
+    <p class="image-caption"><br>Figure 4: Wiring diagram</p>
+
+    <h2>Arduino IDE Preparations</h2>
+    <h3>Setting the ESP8266 Web Server Pages</h3>
+    <p>Upload the html files in the data folder to the SPIFFS by clicking “ESP8266 sketch data upload” https://github.com/esp8266/arduino-esp8266fs-plugin from the tools menu – be sure that the serial window is closed- this will add the control settings page to the ESP8266 web server.
+    </p>
+    <img src="img/blog1/5.png" alt="Wiring diagram" style="margin: auto;">
+    <p class="image-caption"><br>Figure 5</p>
+    <h3>Adding Libraries</h3>
+    <p>Install the following libraries:</p>
+    <ul>
+      <li>WiFiManager: <a href="https://github.com/tzapu/WiFiManager" target="_blank">https://github.com/tzapu/WiFiManager</a></li>
+      <li>DHTesp: <a href="https://github.com/beegee-tokyo/DHTesp" target="_blank">https://github.com/beegee-tokyo/DHTesp</a></li>
+    </ul>
+    <p>Also include these internal libraries in your code:</p>
+    <ul>
+      <li>EEPROM.h</li>
+      <li>ESP8266WiFi.h</li>
+      <li>ESP8266WebServer.h</li>
+      <li>WiFiClient.h</li>
+      <li>FS.h</li>
+      <li>ArduinoJson.h</li>
+    </ul>
+
+    <h2>Running the Project</h2>
+    <p>After uploading the HTML files and code, configure the WiFi manager to save router credentials through the access point “AutoConnectAP.” Configure ThingSpeak parameters through the configuration HTML page.</p>
+    <img src="img/blog1/6.png" alt="Configuration page" style="margin: auto;">
+    <p class="image-caption"><br>Figure 6: Configuration page</p>
+
+    <h2>Conclusion</h2>
+    <p>Once configured, the ESP8266 sends sensor data to ThingSpeak based on the logging interval. View the data in ThingSpeak charts. The complete source code is available on <a href="https://github.com/the-diy-life/ThingSpeakDataLogger" target="_blank">GitHub</a>.</p>
+    <p>Thank you for reading!</p>
+  </div>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Contact Javascript File -->
+  <script src="mail/jqBootstrapValidation.min.js"></script>
+  <script src="mail/contact.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
