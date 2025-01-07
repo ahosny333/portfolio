@@ -6362,6 +6362,15 @@ a.close.disabled {
   background-size: cover;
   z-index: -1;
 }
+.bg-primary-icon
+{
+  background-color: #0BCEAF ;
+  /* background: url(../img/coding-blog.jpg) ; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,

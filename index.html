@@ -16,7 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -44,7 +46,7 @@
                 <a href="#skill" class="nav-item nav-link">Skill</a>
                 <a href="#service" class="nav-item nav-link">Service</a>
                 <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                <a href="#testimonial" class="nav-item nav-link">Review</a>
+                <!-- <a href="#testimonial" class="nav-item nav-link">Review</a> -->
                 <a href="#blog" class="nav-item nav-link">Blog</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
@@ -322,7 +324,7 @@
 
 
     <!-- Services Start -->
-    <!-- <div class="container-fluid pt-5" id="service">
+    <div class="container-fluid pt-5" id="service">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
@@ -331,55 +333,58 @@
             <div class="row pb-3">
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Design</h4>
+                        <i class="fa-brands fa-docker service-icon bg-primary-icon text-white mr-3" style="font-size: 2rem; color: #2496ed;"></i>
+                        <h4 class="font-weight-bold m-0">Containerization</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Build and publish custom images to Docker Hub or private registries. Implement lightweight production-ready Docker images with multi-stage builds</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Development</h4>
+                        <i class="fa fa-2x fa fa-cog fa-spin service-icon bg-primary-icon text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">CI/CD</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Automating build, test, and deployment processes with robust CI/CD pipelines using Jenkins, CircleCI, or AWS CodePipeline for faster and reliable software delivery.</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Apps Design</h4>
+                        <!-- <i class="fab fa-2x fa-solid fa-cloud bg-primary-icon text-white mr-3"></i> -->
+                        <i class="fa fa-2x fa fa-solid fa-cloud service-icon bg-primary-icon text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">AWS Cloud</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Designing, deploying, and optimizing scalable, secure infrastructure on AWS with Docker containerization and Kubernetes orchestration</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Apps Development</h4>
+                        <!-- <i class="fab fa-2x fa-solid fa-laptop-code service-icon bg-primary-icon text-white mr-3"></i> -->
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary-icon text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Developer</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Building scalable web applications using Django or Flask, integrated with robust APIs and secure databases.Designing and implementing RESTful APIs for seamless integration with client applications</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">  
+                        <i class="fa fa-2x fa-solid fa-satellite-dish service-icon bg-primary-icon text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">IOT</h4>
+                    </div>
+                    <p>Design and implement IoT systems that integrate devices and cloud services using MQTT, AWS IoT, and other protocols for reliable data exchange and real-time monitoring</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">SEO</h4>
+                        <!-- <i class="fa fa-2x fa-solid fa-microchip bg-primary-icon text-white mr-3"></i> -->
+                        <i class="fa fa-2x fa-solid fa-microchip service-icon bg-primary-icon text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">EMBEDDED</h4>
                     </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Content Creating</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                    <p>Providing embedded solutions using PIC, AVR, Raspberry Pi, ESP32, and Arduino for industrial, home automation, smart irrigation and power meter applications</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Services End -->
 
 
@@ -612,8 +617,8 @@
             <div class="d-flex justify-content-center mb-4">
                 <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="www.linkedin.com/in/ahmed-hosni-edris"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://github.com/ahosny333"><i class="fab fa-brands fa-github"></i></a>
             </div>
             <div class="d-flex justify-content-center mb-3">
                 <a class="text-white" href="#">Privacy</a>
